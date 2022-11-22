@@ -69,7 +69,7 @@ function populateCardsDynamically() {
 
         testHikeCard.querySelector("img").src = `./images/${hikeID}.jpg`; //equiv getElementByTagName
         testHikeCard.querySelector(".read-more").href =
-          "eachHike.html?hikeName=" + hikeName + "&id=" + hikeID;
+          "eachHike.html?hikeName=" + hikeName + "&id=" + hikeID; // this gets data from another page
         hikeCardGroup.appendChild(testHikeCard);
       });
     });

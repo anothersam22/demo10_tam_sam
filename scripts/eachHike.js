@@ -2,7 +2,7 @@ function populateReviews() {
   let hikeCardTemplate = document.getElementById("CardTemplate");
   let hikeCardGroup = document.getElementById("CardGroup");
 
-  let params = new URL(window.location.href); //get URL of search bar
+  let params = new URL(window.location.href); //get URL in the search bar
   let hikeCode = params.searchParams.get("id"); //get value for key "id"
   let hikeName = params.searchParams.get("hikeName"); //get value for key "hikeNam
   document.getElementById("HikeName").innerHTML = hikeName;
@@ -10,7 +10,7 @@ function populateReviews() {
   message += " &nbsp | Document id is:  " + hikeCode;
   document.getElementById("details-go-here").innerHTML = message;
 
-  // doublecheck: is your collection called "Reviews" or "reviews"?
+  // double check: is your collection called "Reviews" or "reviews"?
   db.collection("Reviews")
     .where("code", "==", hikeCode)
     .get()
